@@ -1,0 +1,54 @@
+{
+  "updated_at": "2026-09-16T17:47:38.118096+00:00",
+  "nodes": [
+    {
+      "node_id": "node-01",
+      "anomaly": false,
+      "risk_score": 2,
+      "trend": "stable",
+      "predicted_failure_window": null,
+      "reasoning": "Telemetry shows stable voltage (~4.11V), nominal temperature, and low CPU load."
+    },
+    {
+      "node_id": "node-02",
+      "anomaly": false,
+      "risk_score": 5,
+      "trend": "stable",
+      "predicted_failure_window": null,
+      "reasoning": "Metrics remain steady with consistent voltage and temperature across the window."
+    },
+    {
+      "node_id": "node-03",
+      "anomaly": true,
+      "risk_score": 88,
+      "trend": "critical",
+      "predicted_failure_window": "5-10 min",
+      "reasoning": "Voltage is rapidly dropping toward critical levels (down to 3.716V) accompanied by rising CPU load (32.6% to 40.1%)."
+    },
+    {
+      "node_id": "node-04",
+      "anomaly": false,
+      "risk_score": 3,
+      "trend": "stable",
+      "predicted_failure_window": null,
+      "reasoning": "All operational parameters are entirely normal with low, decreasing CPU load."
+    },
+    {
+      "node_id": "node-05",
+      "anomaly": true,
+      "risk_score": 45,
+      "trend": "degrading",
+      "predicted_failure_window": "20-30 min",
+      "reasoning": "Temperature shows a steady upward trend from 26.20C to 26.97C alongside increasing CPU utilization."
+    },
+    {
+      "node_id": "node-06",
+      "anomaly": false,
+      "risk_score": 10,
+      "trend": "stable",
+      "predicted_failure_window": null,
+      "reasoning": "Slight RSSI fluctuation observed, but core voltage, temperature, and CPU metrics remain stable."
+    }
+  ],
+  "fleet_summary": "Most nodes are healthy and stable, with the exception of node-03 experiencing severe voltage degradation and node-05 exhibiting a steady temperature climb."
+}
